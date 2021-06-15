@@ -1,0 +1,3 @@
+[submodule "alternator-load-balancing"]
+	path = alternator-load-balancing
+	url = https://github.com/scylladb/alternator-load-balancing.git
