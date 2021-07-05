@@ -22,7 +22,6 @@ import static com.scylladb.alternator.StreamsAdapterDemoHelper.putItems;
 import static com.scylladb.alternator.StreamsAdapterDemoHelper.scanTable;
 import static java.util.Collections.emptyMap;
 import static java.util.concurrent.CompletableFuture.completedFuture;
-import static java.util.concurrent.CompletableFuture.failedFuture;
 import static java.util.concurrent.Executors.newFixedThreadPool;
 import static java.util.concurrent.Executors.newScheduledThreadPool;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
@@ -84,6 +83,12 @@ import software.amazon.awssdk.services.dynamodb.streams.DynamoDbStreamsAsyncClie
 
 public class StreamsAdapterDemo2 {
     private final static Logger LOGGER = LoggerFactory.getLogger(StreamsAdapterDemo2.class.getName());
+
+    public static <U> CompletableFuture<U> failedFuture(Throwable ex) {
+        CompletableFuture<U> f = new CompletableFuture<U>();
+        f.completeExceptionally(ex);
+        return f;
+    }
 
     /**
      * @param args
