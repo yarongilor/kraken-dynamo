@@ -222,6 +222,9 @@ public class StreamsAdapterDemo2 {
                     }
                 }
 
+                long now = System.currentTimeMillis();
+                LOGGER.info("Sync took {} ms.", now - start);
+
                 scanner.shutdown();
 
                 if (create_data) {
