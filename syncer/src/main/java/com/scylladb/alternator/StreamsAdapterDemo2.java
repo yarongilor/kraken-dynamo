@@ -106,7 +106,7 @@ public class StreamsAdapterDemo2 {
         parser.addArgument("-u", "--user").setDefault("none").help("Credentials username");
         parser.addArgument("-p", "--password").setDefault("none").help("Credentials password");
         parser.addArgument("-r", "--region").setDefault("us-east-1").help("AWS region");
-        parser.addArgument("-t", "--table-prefix").setDefault("KCL-Demo").help("Demo table name prefix");
+        parser.addArgument("-t", "--table-prefix").setDefault("streams-demo").help("Demo table name prefix");
 
         parser.addArgument("-k", "--key-number").type(Integer.class).setDefault(0)
                 .help("number of key in the src table");
