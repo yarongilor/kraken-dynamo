@@ -5,7 +5,7 @@
 	<groupId>com.scylladb.alternator</groupId>
 	<artifactId>kraken-dynamo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-    <packaging>pom</packaging>
+	<packaging>pom</packaging>
 
 	<modules>
 		<module>alternator-load-balancing/java</module>
