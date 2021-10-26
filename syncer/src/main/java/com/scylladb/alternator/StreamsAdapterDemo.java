@@ -81,8 +81,8 @@ import software.amazon.awssdk.services.dynamodb.model.TableStatus;
 import software.amazon.awssdk.services.dynamodb.streams.DynamoDbStreamsAsyncClient;
 import software.amazon.awssdk.services.dynamodb.streams.DynamoDbStreamsAsyncClientBuilder;
 
-public class StreamsAdapterDemo2 {
-    private final static Logger LOGGER = LoggerFactory.getLogger(StreamsAdapterDemo2.class.getName());
+public class StreamsAdapterDemo {
+    private final static Logger LOGGER = LoggerFactory.getLogger(StreamsAdapterDemo.class.getName());
 
     public static <U> CompletableFuture<U> failedFuture(Throwable ex) {
         CompletableFuture<U> f = new CompletableFuture<U>();
